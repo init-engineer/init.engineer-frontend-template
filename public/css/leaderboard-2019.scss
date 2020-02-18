@@ -1,0 +1,227 @@
+$white: #fff;
+$black: #000;
+$sec-white: rgb(133, 113, 108);
+$dark-blue: #023459;
+$light-blue: #471EF6;
+$green: #1E646E;
+
+@mixin middle-width() {
+    @media(max-width:720px){
+      @content;
+    }
+}
+@mixin small-width() {
+    @media(max-width:576px){
+      @content;
+    }
+}
+
+body{
+    background-color: $black;
+}
+
+.container{
+    max-width: 1440px;
+}
+
+#leaderBoard-entrance {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Black Ops One', 'Noto Sans TC';
+    p{
+        margin: 0;
+    }
+    .title-wrap{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $dark-blue;
+        padding: 2rem;
+        box-shadow: 15px 15px 0px orange;
+        @include middle-width {
+            width: 60%;
+        }
+        .entrance-title {
+            display: inline-block;
+            font-size: 5em;
+            color: $white;
+            @include middle-width {
+                font-size: 14px;
+            } 
+        }
+        .entrance-title-2 {
+            display: inline-block;
+            font-size: 5em;
+            color: $white;
+            @include middle-width {
+                font-size: 14px;
+            } 
+        }
+        .letter {
+            display: inline-block;
+            line-height: 1em;
+        }
+        .letter2 {
+            display: inline-block;
+            line-height: 1em;
+        }
+    }
+    .scroll-line{
+        position: absolute;
+        bottom: 0;
+        left: 20%;
+        width: 2px;
+        height: 100px;
+        background-color: $white;
+        animation: scrollDown 2s infinite linear;
+        @keyframes scrollDown {
+            0%{
+                transform-origin: top;
+                transform: scaleY(0);
+            }
+            45%{
+                transform-origin: top;
+                transform: scaleY(1);                
+            }
+            55%{
+                transform-origin: bottom;
+                transform: scaleY(1);          
+            }
+            100%{
+                transform-origin: bottom;
+                transform: scaleY(0);          
+            }
+        }
+    }
+}
+
+#years-accumulation{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    :nth-child(n){
+        display: flex;
+        justify-content: flex-end;
+        @include small-width {
+            justify-content: center;
+        }
+    }
+    :nth-child(2n){
+        display: flex;
+        justify-content: flex-start;
+        @include small-width {
+            justify-content: center;
+        }   
+    }
+    :nth-child(3n){
+        display: flex;
+        justify-content: center;   
+    }
+    .years-accumulation-wrap{
+        .years-accumulation-item{
+            margin: 8rem;
+            width: 18rem;
+            height: 18rem;
+            border-radius: 50%;
+            color: $white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgb(2,52,89);
+            background: linear-gradient(120deg, rgba(2,52,89,1) 0%, rgba(20,66,100,1) 55%, rgba(208,215,220,0.7) 80%, rgba(242,242,242,1) 100%);
+            box-shadow: 3px 5px 5px $black;
+            @include middle-width {
+                width: 15rem;
+                height: 15rem;
+            }
+            p{
+                font-size: 1.6rem;
+                font-weight: 550;
+                font-family: 'Noto Sans TC';
+                text-shadow: 1px 2px 5px $black;
+            }
+            .accumulation-num{
+                font-size: 1.8rem;
+                font-family: 'Black Ops One';
+                letter-spacing: 3px;
+                text-shadow: 1px 2px 5px $black;
+                
+            }
+        }      
+    }    
+}
+
+#best-articles{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    @include middle-width {
+        padding: 1rem;
+    }
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .article-block {
+            background-color: $white;
+            margin: 2rem;
+            @include middle-width {
+                margin: 1rem 0;
+            }
+            .article-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: .5rem 1rem;
+                font-family: 'Black Ops One', 'Noto Sans TC';
+                .article-title {
+                    margin: 0;
+                    padding: .4rem .2rem;
+                    font-size: 1.2rem;
+                }
+                .article-number {
+                    margin: 0;
+                    margin-left: 5px;
+                    font-size: 1rem;
+                    color: $sec-white;
+                }
+            }
+            .article-img {
+                display: block;
+                height: 300px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .article-likes {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: .5rem 1rem;
+                font-family: 'Black Ops One', 'Noto Sans TC';
+                .sns {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 25px;
+                        height: 25px;
+                    }
+                    .sns-num {
+                        margin: 0;
+                        margin-left: 5px;
+                        font-size: 1rem;
+                        color: $sec-white;
+                    }
+                }
+            }
+        }
+    }
+
+}

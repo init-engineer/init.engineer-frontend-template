@@ -1,4 +1,4 @@
-# 純靠北工程師 前端模板 README.md
+# 純靠北工程師 前端模板實作活動 README.md
 
 ![GitHub contributors](https://img.shields.io/github/contributors/init-engineer/init.engineer-frontend-template.svg)
 ![GitHub stars](https://img.shields.io/github/stars/init-engineer/init.engineer-frontend-template.svg?style=social)
@@ -9,6 +9,24 @@
 - [Twitter 粉絲團](https://twitter.com/kaobei_engineer)
 - [Plurk 粉絲團](https://www.plurk.com/kaobei_engineer)
 ---
+## 切版簡述
+  
+ 最後更新：109.02.19 
+  
+  感謝[小蟹](https://github.com/wildjcrt)協助解決計數器重置的問題，讓視覺體驗更好 இдஇ
+ <hr>
+ 
+ 這是第三個版本，應該也是最終版了。主要有視差捲動、累積數字計數、文字動畫與捲動動畫，感謝巨人前輩們的肩膀！
+ 以下是使用到的 Plugin
+ - [Aos.js](https://github.com/michalsnik/aos) → scroll 捲動動畫 Plugin
+ - [countUp.js](https://github.com/inorganik/countUp.js) → 計數 Plugin
+ - [lightbox.js](https://lokeshdhakar.com/projects/lightbox2/) → 燈箱 Plugin
+ - [MOVING LETTERS](https://tobiasahlin.com/moving-letters/) → 文字動畫 Plugin
+ - [Parallax.js](https://github.com/pixelcog/parallax.js) → 視差捲動 Plugin　
+ 
+ 請直接開啟 `templates/init.engineer-frontend-template.html` 即可
+
+
 ## 簡介
 
 大家好，這是一份純靠北工程師的前端模板，面向的是單純只做局部頁面開發的前端開發者，如果你單純只想寫頁面，那這個 Repository 將是你最適合的模板範例，模板提供了最基本的前端資源，以及更進一步的 `scss`、`package.json`、`webpack.mix.js` ... 等等。
@@ -90,7 +108,7 @@
 
 ---
 #### 【活動期限】
-- 活動截止 2020/01/19(日)
+- 活動截止 <del>2020/01/19(日)</del> 2020/02/09
 
 ---
 #### 【簡要問答】
